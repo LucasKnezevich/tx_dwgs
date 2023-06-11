@@ -14,7 +14,7 @@ export const UpdateRecord = async (apiKey, table, record) => {
 
   try {
     const endpoint = endpointIdentifier(table)
-    const response = await fetch(`http://localhost:3000/update_${endpoint}`, {
+    const response = await fetch(`https://txdwgs-api.onrender.com//update_${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

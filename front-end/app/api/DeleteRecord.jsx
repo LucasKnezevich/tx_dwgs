@@ -3,7 +3,7 @@ import { message } from 'antd'
 export const DeleteRecord = async (apiKey, record) => {
   console.log('Deleting record: ', record)
   try {
-    const response = await fetch('http://localhost:3000/admin', {
+    const response = await fetch('https://txdwgs-api.onrender.com/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
