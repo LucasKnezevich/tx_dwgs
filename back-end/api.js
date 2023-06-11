@@ -5,9 +5,6 @@ const connection = require('./dbConnection');
 app.use(express.json());
 const queries = require('./sqlQueries');
 
-const cors = require('cors')
-app.use(cors())
-
 // import queries
 let poleQuery = queries.poleQuery;
 let dwgQuery = queries.dwgQuery;
