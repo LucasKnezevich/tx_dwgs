@@ -124,9 +124,13 @@ const AdminTableView = () => {
   }
 
   const handleSave = async (record) => {
-    const updateObject = updateObjectCreator(record)
-    await UpdateRecord(apiKey, table, updateObject)
-    cancel()
+    if (apiKey.length > 0) {
+      const updateObject = updateObjectCreator(record)
+      await UpdateRecord(apiKey, table, updateObject)
+      cancel()
+    } else {
+      message.error('Enter an API key to delete a record.')
+    }
   }
 
   const cancel = () => {
