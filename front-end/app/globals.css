@@ -193,7 +193,7 @@ body {
 
 /* Result Table Component */
 .results-table {
-  width: 90%;
+  width: 98%;
   background-color: var(--transparent-white);
   padding: .4rem;
   border-radius: 1rem;
