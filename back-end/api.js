@@ -4,7 +4,7 @@ const port = 3000;
 const connection = require('./dbConnection');
 app.use(express.json());
 const queries = require('./sqlQueries');
-const pool = require('./dbPoolConnection');
+// const pool = require('./dbPoolConnection');
 const cors = require('cors')
 app.use(cors())
 
