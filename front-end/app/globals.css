@@ -242,6 +242,9 @@ font-style: italic;
 .warning-text {
   color: var(--warning);
   font-size: 1.2rem;
+  background-color: var(--transparent-white);
+  padding: 0 .5rem;
+  border-radius: .25rem;
 }
 
 /* LOADING INDICATOR */
