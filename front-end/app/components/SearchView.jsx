@@ -70,7 +70,9 @@ const SearchView = () => {
         : null}
 
       {data.length === 0
-        ? null
+        ? <p className='warning-text'>
+            Please allow approximately one minute for the web service to start up the first time a query is run.
+          </p>
         : (
             loading
               ? <span className='loader'></span>
