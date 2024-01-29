@@ -92,6 +92,11 @@ body {
   padding: 0 1rem;
 }
 
+.header-demo-text {
+  color: var(--warning);
+  transform: rotate(-16deg);
+}
+
 
 /* DROPDOWN */
 .dropdown {
@@ -188,6 +193,24 @@ body {
 
 .api-key-input {
   margin-bottom: 1rem;
+}
+
+.search-form-instructions {
+  text-align: center;
+  background-color: var(--transparent-white);
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding: .4rem;
+  border-radius: 5px;
+}
+
+.sample-queries {
+  color: var(--black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-weight: bold;
 }
 
 

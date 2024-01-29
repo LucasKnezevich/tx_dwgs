@@ -18,6 +18,7 @@ const Header = () => {
       </div>
       <Dropdown />
       <h1 className='header-title'>Transmission Drawings</h1>
+      <h3 className="header-demo-text">Demo</h3>
     </header>
   )
 }

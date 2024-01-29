@@ -65,6 +65,15 @@ const SearchView = () => {
         <button type='submit' className='btn btn-standard'>Search</button>
       </form>
 
+      <div className="search-form-instructions">
+        <p><em><b>Note:</b> Search is tightly scoped, sample queries below.</em></p>
+        <div className="sample-queries">
+          <p>120</p>
+          <p>T130-10</p>
+          <p>M-SC 3/12</p>
+        </div>
+      </div>
+
       {noResultsFound
         ? <p className='warning-text'>No Results Found</p>
         : null}
