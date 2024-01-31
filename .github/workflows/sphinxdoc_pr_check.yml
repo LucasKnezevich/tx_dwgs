@@ -6,7 +6,17 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "./docs/"
+      - name: "Checkout code"
+        uses: actions/checkout@v3
+
+      - name: "Install myst-parser"
+        uses: pip install myst-parser
+
+      - name: "Install book theme"
+        uses: pip install sphinx-book-theme
+
+      - name: "Build Sphinx"
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "./docs/"
+          build-command: "python -m sphinx.cmd.build ./source/ ./build/"
