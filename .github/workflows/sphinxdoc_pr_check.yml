@@ -1,6 +1,6 @@
 name: "Sphinx Pull Request Docs Check"
 on:
-  - pull_request
+  - push
 
 jobs:
   docs:
