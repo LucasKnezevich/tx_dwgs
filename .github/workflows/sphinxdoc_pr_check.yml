@@ -10,10 +10,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: "Install myst-parser"
-        uses: pip install myst-parser
+        run: pip install myst-parser
 
       - name: "Install book theme"
-        uses: pip install sphinx-book-theme
+        run: pip install sphinx-book-theme
 
       - name: "Build Sphinx"
         uses: ammaraskar/sphinx-action@master
