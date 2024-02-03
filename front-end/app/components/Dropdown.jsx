@@ -1,7 +1,7 @@
 'use client'
 import { React, useState } from 'react'
 import Link from 'next/link'
-import { AiFillSetting, AiOutlineBarChart, AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
+import { AiFillSetting, AiOutlineBarChart, AiOutlineBook, AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 
 const Dropdown = () => {
   const [open, setOpen] = useState(false)
@@ -36,6 +36,10 @@ const Dropdown = () => {
                 <Link href='/admin' className='dropdown-link' onClick={() => setOpen(!open)}>
                   <AiFillSetting className='icon dropdown-icon'/>
                   <p>Admin</p>
+                </Link>
+                <Link href='https://lucasknezevich.github.io/tx_dwgs/' className='dropdown-link' onClick={() => setOpen(!open)}>
+                  <AiOutlineBook className='icon dropdown-icon'/>
+                  <p>Docs</p>
                 </Link>
               </div>
             )

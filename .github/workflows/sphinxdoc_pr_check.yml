@@ -5,18 +5,37 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
+
+
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v3
 
-      - name: "Install myst-parser"
-        run: pip install myst-parser
+      - name: "Install Sphinx, myst-parser, book theme"
+        run: |
+          pip install -U sphinx
+          pip install myst-parser
+          pip install sphinx-book-theme
 
-      - name: "Install book theme"
-        run: pip install sphinx-book-theme
+      - name: "Build Sphinx Docs"
+        run: |
+          python -m sphinx.cmd.build ./source/ ./build/
 
-      - name: "Build Sphinx"
-        uses: ammaraskar/sphinx-action@master
+      
+      - name: Commit documentation changes
+        run: |
+          cd docs/build/
+          git init
+          touch .nojekyll
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'Automated Documentation Update Build'
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@.0.5.0
         with:
-          docs-folder: "./docs/"
-          build-command: "python -m sphinx.cmd.build ./source/ ./build/"
+          branch: gh-pages
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: ./docs/build
