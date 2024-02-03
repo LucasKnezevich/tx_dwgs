@@ -33,7 +33,7 @@ jobs:
           git commit -m 'Automated Documentation Update Build'
         
       - name: Push changes
-        uses: ad-m/github-push-action@.0.5.0
+        uses: ad-m/github-push-action@v0.5.0
         with:
           branch: gh-pages
           force: true
