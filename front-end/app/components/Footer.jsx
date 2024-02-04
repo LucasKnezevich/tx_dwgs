@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { AiOutlineGithub } from 'react-icons/ai'
 
 const Footer = () => {
-  const githubRepo = 'https://github.com/LucasKnezevich/tx_dwgs/tree/lfk-backendDeployUpdate'
+  const githubRepo = 'https://github.com/LucasKnezevich/tx_dwgs'
 
   return (
     <>
