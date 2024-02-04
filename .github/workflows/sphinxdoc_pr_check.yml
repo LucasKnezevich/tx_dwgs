@@ -1,0 +1,40 @@
+name: Sphinx Push Doc Build
+
+on:
+  - push
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Sphinx, myst-parser, book theme
+        run: |
+          pip install -U sphinx
+          pip install myst-parser
+          pip install sphinx-book-theme
+
+      - name: Build Sphinx docs
+        run: |
+          python -m sphinx.cmd.build ./docs/source/ ./docs/prod-build/
+      
+      - name: Commit updated doc build
+        run: |
+          cd docs/prod-build/
+          git init
+          touch .nojekyll
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'Automated Docs Build Update'
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: ./docs/prod-build

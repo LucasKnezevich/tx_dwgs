@@ -97,6 +97,35 @@ body {
   transform: rotate(-16deg);
 }
 
+/* FOOTER */
+.layout-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header-content-wrap {
+  padding-bottom: 4rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  min-width: 100%;
+  background-color: var(--white);
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: var(--logo-green);
+}
+
 
 /* DROPDOWN */
 .dropdown {
