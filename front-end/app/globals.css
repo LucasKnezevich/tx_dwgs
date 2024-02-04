@@ -4,7 +4,7 @@
   /* Text */
   --warning: rgb(255, 0, 0);
   --warning-secondary: #ff5757;
-  --alert: #fcba03;
+  --alert: #fad87c;
 
   /* General */
   --logo-green: #14A484;
@@ -12,6 +12,7 @@
   --black: #000000;
   --white: #FFFFFF;
   --transparent-white: rgba(255, 255, 255, .75);
+  --tint: rgba(255, 255, 255, .4);
   --gray: #dbdbdb;
   --blue: #0006b6;
 }
@@ -25,7 +26,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: linear-gradient(0deg, rgba(18, 136, 36, 0.1), rgba(10, 118, 37, 0.1)), url('../public/images/background9.png') no-repeat center center fixed;
+  background: linear-gradient(0deg, rgba(136, 156, 139, 0.08), rgba(136, 156, 139, 0.08)), url('../public/images/background9.png') no-repeat center center fixed;
   background-size: cover;
   color: var(--logo-green);
 }
@@ -33,11 +34,13 @@ body {
 
 /* GENERAL BUTTONS */
 .btn {
+  text-decoration: none;
   font-size: 1rem;
   height: 2rem;
   width: 10rem;
   border: none;
   border-radius: .2rem;
+  color: var(--black);
 }
 
 .btn:hover {
@@ -62,16 +65,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: .4rem;
   color: rgb(17, 7, 61);
+  background-color: var(--transparent-white);
 }
 
 .header-image{
-  margin: 1rem
+  margin: 0 1rem;
+  transition: 1s ease;
 }
 
 .header-image:hover {
-  transition: 1s;
   transform: scale(1.1);
   z-index: 1;
 }
@@ -81,6 +85,45 @@ body {
   max-width: 150%;
   max-height: 150%;
   overflow: hidden;
+}
+
+.header-title {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.header-demo-text {
+  color: var(--warning);
+  transform: rotate(-16deg);
+}
+
+/* FOOTER */
+.layout-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header-content-wrap {
+  padding-bottom: 4rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  min-width: 100%;
+  background-color: var(--white);
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: var(--logo-green);
 }
 
 
@@ -164,23 +207,48 @@ body {
   width: 90%;
   max-width: 30rem;
   height: 3rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border-color: var(--logo-green);
-  border-width: .3rem;
+  border-width: .2rem;
   font-size: 1rem;
   padding: 1rem;
   border-style: solid;
+}
+
+.searchbar:focus {
+  border-radius: .6rem;
+  border-color: var(--logo-green);
 }
 
 .api-key-input {
   margin-bottom: 1rem;
 }
 
+.search-form-instructions {
+  text-align: center;
+  background-color: var(--transparent-white);
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding: .4rem;
+  border-radius: 5px;
+}
+
+.sample-queries {
+  color: var(--black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-weight: bold;
+}
+
 
 /* Result Table Component */
 .results-table {
-  width: 90%;
-  background-color: var(--logo-green);
+  width: 98%;
+  background-color: var(--transparent-white);
+  padding: .4rem;
+  border-radius: 1rem;
 }
 
 .results-table-row {
@@ -236,7 +304,7 @@ font-style: italic;
   margin-top: 2rem;
   width: 48px;
   height: 48px;
-  border: 3px dotted var(--SnoPUD-logo-green);
+  border: 3px dotted var(--logo-green);
   border-style: solid solid dotted dotted;
   border-radius: 50%;
   display: inline-block;
@@ -253,7 +321,7 @@ font-style: italic;
   top: 0;
   bottom: 0;
   margin: auto;
-  border: 3px dotted var(--SnoPUD-logo-green);
+  border: 3px dotted var(--logo-green);
   border-style: solid solid dotted;
   width: 24px;
   height: 24px;
@@ -379,7 +447,7 @@ margin: 20rem;
 .add-form-field-container {
   display: flex;
   flex-direction: column;
-  row-gap: .4rem;
+  row-gap: 1rem;
 }
 
 .add-clear-btn-container {
@@ -394,15 +462,15 @@ margin: 20rem;
 
 .add-form-field {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 1rem;
+  flex-direction: column;
+  justify-content: space-betwceen;
+  align-items: flex-start;
+  column-gap: 1rem;
   column-gap: 1rem;
 }
 
 .add-field-input {
-  width: 32rem;
+  width: 22rem;
   height: 2rem;
   font-size: 1rem;
 }
@@ -417,5 +485,22 @@ margin: 20rem;
   .table-btns {
     flex-direction: row;
     column-gap: 2rem;
+  }
+
+  .add-form-field {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .add-form-field-container {
+    row-gap: .4rem;
+  }
+
+  .add-field-input {
+    width: 32rem;
+    height: 2rem;
+    font-size: 1rem;
   }
 }

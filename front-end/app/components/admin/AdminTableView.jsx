@@ -73,7 +73,7 @@ const AdminTableView = () => {
       await DeleteRecord(apiKey, deleteValue)
       await loadData(table)
     } else {
-      message.error('Enter an API key to delete a record.')
+      message.error('Please enter an API key to delete a record.')
     }
   }
 
@@ -119,14 +119,18 @@ const AdminTableView = () => {
       return updatedLine
     }
 
-    console.warn('NO TABLE MATCH, RECORD NOT UPDATED')
+    // console.warn('NO TABLE MATCH, RECORD NOT UPDATED')
     return record
   }
 
   const handleSave = async (record) => {
-    const updateObject = updateObjectCreator(record)
-    await UpdateRecord(apiKey, table, updateObject)
-    cancel()
+    if (apiKey.length > 0) {
+      const updateObject = updateObjectCreator(record)
+      await UpdateRecord(apiKey, table, updateObject)
+      cancel()
+    } else {
+      message.error('Please enter an API key to update a record.')
+    }
   }
 
   const cancel = () => {

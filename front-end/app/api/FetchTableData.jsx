@@ -1,6 +1,6 @@
 export const FetchTableData = async (table) => {
   try {
-    const response = await fetch('http://localhost:3000/tables', {
+    const response = await fetch('https://txdwgs-api.onrender.com/tables', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
