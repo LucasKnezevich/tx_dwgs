@@ -19,7 +19,7 @@ jobs:
 
       - name: "Build Sphinx Docs"
         run: |
-          python -m sphinx.cmd.build ./source/ ./build/
+          python -m sphinx.cmd.build ./docs/source/ ./docs/build/
 
       
       - name: Commit documentation changes
