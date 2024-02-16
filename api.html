@@ -1,0 +1,1423 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API &#8212; Transmission Drawings  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Front-End" href="front-end.html" />
+    <link rel="prev" title="Scripts" href="scripts.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Transmission Drawings  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="existing.html">Existing Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Standards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Scripts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="front-end.html">Front-End</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">User Interface (UI/UX)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/api.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>API</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">Errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Unique Identifiers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-insert">POST /insert</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#body">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#response">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-line">POST /update_line</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-drawings">POST /update_drawings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-pole">POST /update_pole</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tables">POST /tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pole-table">Pole Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pole-drawings-table">Pole Drawings Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#line-table">Line Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#drawings-table">Drawings Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-admin">POST /admin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post">POST /</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-drawings-by-pole-stencil">Transmission Drawings by Pole Stencil</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-drawings-by-line-number">Transmission Drawings by Line Number</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-poles-by-line-number">Transmission Poles by Line Number</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-files">Sample Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Transmission Drawings by Pole Stencil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Transmission Drawings by Line Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Transmission Poles by Line Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-poles-by-drawing-number">Transmission Poles by Drawing Number</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">POST /</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">POST/admin</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
+<section id="errors">
+<span id="unique-identifiers"></span><h2>Errors<a class="headerlink" href="#errors" title="Link to this heading">#</a></h2>
+<p>We use conventional HTTP response codes to indicate the success or failure of an API request. The following table provides additional detail.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>HTTP Status Code</p></th>
+<th class="head"><p>Code Summary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200 - OK</p></td>
+<td><p>Everything worked as expected</p></td>
+</tr>
+<tr class="row-odd"><td><p>400 - Bad Request</p></td>
+<td><p>The request was unacceptable often due to missing a required parameter</p></td>
+</tr>
+<tr class="row-even"><td><p>500 - Server Error</p></td>
+<td><p>Server side errors</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h2>Unique Identifiers<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>To modify a single record, choose a singular and distinct identifier. If two fields are identified, the system will automatically default to using the ID field.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Table</p></th>
+<th class="head"><p>Unique Identifier</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pole</p></td>
+<td><p>pole_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>pole_drawings</p></td>
+<td><p>pole_drawings_id</p></td>
+</tr>
+<tr class="row-even"><td><p>line</p></td>
+<td><p>line_id, line_number</p></td>
+</tr>
+<tr class="row-odd"><td><p>drawings</p></td>
+<td><p>drawing_id, drawing_name</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="requests">
+<h2>Requests<a class="headerlink" href="#requests" title="Link to this heading">#</a></h2>
+<section id="post-insert">
+<h3>POST /insert<a class="headerlink" href="#post-insert" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">insert</span>
+</pre></div>
+</div>
+<section id="body">
+<h4>Body<a class="headerlink" href="#body" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>api_key</p></td>
+<td><p><em>string</em></p></td>
+<td><p>valid api key</p></td>
+</tr>
+<tr class="row-odd"><td><p>table_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of table to modify “pole”, “drawings”, “line”, or “pole_drawings”</p></td>
+</tr>
+<tr class="row-even"><td><p>table_value</p></td>
+<td><p><em>object</em></p></td>
+<td><p>key/values to update, must include unique identifier for each table type, see <a class="reference internal" href="#unique-identifiers"><span class="std std-ref">Unique Identifiers table</span></a>. See example below, note that <strong>all</strong> fields must be included for update.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pole Update</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;pole&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Line Update</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;line_number&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Drawing Update</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;drawings&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_id&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Pole Drawings Update</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;pole_drawings&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_id&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="response">
+<h4>Response<a class="headerlink" href="#response" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>OK</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Error. <em>Description to detail issue.</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post-update-line">
+<h3>POST /update_line<a class="headerlink" href="#post-update-line" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">update_line</span>
+</pre></div>
+</div>
+<section id="id2">
+<h4>Body<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>api_key</p></td>
+<td><p><em>string</em></p></td>
+<td><p>valid api key</p></td>
+</tr>
+<tr class="row-odd"><td><p>table_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of table type to modify</p></td>
+</tr>
+<tr class="row-even"><td><p>table_value</p></td>
+<td><p><em>object</em></p></td>
+<td><p>key/values to update, must include unique identifier for each table type, see <a class="reference internal" href="#unique-identifiers"><span class="std std-ref">Unique Identifiers table</span></a>. See example below, note that <strong>all</strong> fields must be included for update.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;line_number_existing&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_number_new&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h4>Response<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>OK</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Error. <em>Description to detail issue.</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post-update-drawings">
+<h3>POST /update_drawings<a class="headerlink" href="#post-update-drawings" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">update_drawings</span>
+</pre></div>
+</div>
+<section id="id4">
+<h4>Body<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>api_key</p></td>
+<td><p><em>string</em></p></td>
+<td><p>valid api key</p></td>
+</tr>
+<tr class="row-odd"><td><p>table_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of table type to modify</p></td>
+</tr>
+<tr class="row-even"><td><p>table_value</p></td>
+<td><p><em>object</em></p></td>
+<td><p>key/values to update, must include unique identifier for each table type, see <a class="reference internal" href="#unique-identifiers"><span class="std std-ref">Unique Identifiers table</span></a>. See example below, note that <strong>all</strong> fields must be included for update.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;drawing_name_existing&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name_new&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span><span class="p">:</span> <span class="s2">&quot;string/int&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h4>Response<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>OK</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Error. <em>Description to detail issue.</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post-update-pole">
+<h3>POST /update_pole<a class="headerlink" href="#post-update-pole" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">update_pole</span>
+</pre></div>
+</div>
+<section id="id6">
+<h4>Body<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>api_key</p></td>
+<td><p><em>string</em></p></td>
+<td><p>valid api key</p></td>
+</tr>
+<tr class="row-odd"><td><p>table_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of table type to modify</p></td>
+</tr>
+<tr class="row-even"><td><p>table_value</p></td>
+<td><p><em>object</em></p></td>
+<td><p>key/values to update, must include unique identifier for each table type, see <a class="reference internal" href="#unique-identifiers"><span class="std std-ref">Unique Identifiers table</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;table_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">&quot;unique_identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;int&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;updated_field&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h4>Response<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>OK</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Error. <em>Description to detail issue.</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post-tables">
+<h3>POST /tables<a class="headerlink" href="#post-tables" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">tables</span>
+</pre></div>
+</div>
+<section id="id8">
+<h4>Body<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tables</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of table, accepts : “pole”, “pole_drawings”, “line”, and “drawings”</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h4>Response<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>OK</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Invalid table name</p></td>
+</tr>
+</tbody>
+</table>
+<section id="pole-table">
+<h5>Pole Table<a class="headerlink" href="#pole-table" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pole_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>table key</p></td>
+</tr>
+<tr class="row-odd"><td><p>pole_stencil</p></td>
+<td><p><em>string</em></p></td>
+<td><p>unique, pole stencil / common name identifier</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example displays a limited portion of the data retrieved from the API. The actual result will have more than 5 elements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI 5/5&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span> <span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI 0/I&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI 0/2&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span> <span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI 0/3&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_id&quot;</span> <span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI 0/4&quot;</span>
+	<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="pole-drawings-table">
+<h5>Pole Drawings Table<a class="headerlink" href="#pole-drawings-table" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pole_drawings_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>table key</p></td>
+</tr>
+<tr class="row-odd"><td><p>pole_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>pole table key</p></td>
+</tr>
+<tr class="row-even"><td><p>drawing_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>drawing table key</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example displays a limited portion of the data retrieved from the API. The actual result will have more than 5 elements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+<section id="line-table">
+<h5>Line Table<a class="headerlink" href="#line-table" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>line_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>line table key</p></td>
+</tr>
+<tr class="row-odd"><td><p>line_number</p></td>
+<td><p><em>int</em></p></td>
+<td><p>line number, unique</p></td>
+</tr>
+<tr class="row-even"><td><p>line_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>common name for line</p></td>
+</tr>
+<tr class="row-odd"><td><p>line_abbreviation</p></td>
+<td><p><em>string</em></p></td>
+<td><p>abbreviation for line_name / common name</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example displays a limited portion of the data retrieved from the API. The actual result will have more than 5 elements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;line_id&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+		<span class="s2">&quot;line_number&quot;</span> <span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Stimson-Camano&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span> <span class="p">:</span> <span class="s2">&quot;CI&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;line_id&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+		<span class="s2">&quot;line_number&quot;</span> <span class="p">:</span> <span class="mi">102</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Lake Goodwin&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span> <span class="p">:</span> <span class="s2">&quot;LG&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;line_id&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+		<span class="s2">&quot;line_number&quot;</span> <span class="p">:</span> <span class="mi">103</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;TULALIP&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span> <span class="p">:</span> <span class="s2">&quot;WM&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;line_id&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+		<span class="s2">&quot;line_number&quot;</span> <span class="p">:</span> <span class="mi">104</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Snohomish-East Marysville&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span> <span class="p">:</span> <span class="s2">&quot;S-EM&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;line_id&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+		<span class="s2">&quot;line_number&quot;</span> <span class="p">:</span> <span class="mi">106</span><span class="p">,</span>
+		<span class="s2">&quot;line_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Snohomish-Delta&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;line_abbreviation&quot;</span> <span class="p">:</span> <span class="s2">&quot;S-D&quot;</span>
+	<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="drawings-table">
+<h5>Drawings Table<a class="headerlink" href="#drawings-table" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>drawing_id</p></td>
+<td><p><em>int</em></p></td>
+<td><p>table key</p></td>
+</tr>
+<tr class="row-odd"><td><p>drawing_name</p></td>
+<td><p><em>string</em></p></td>
+<td><p>name of drawing starting with a “T”</p></td>
+</tr>
+<tr class="row-even"><td><p>drawing_title</p></td>
+<td><p><em>string</em></p></td>
+<td><p>title of drawing</p></td>
+</tr>
+<tr class="row-odd"><td><p>revision_number</p></td>
+<td><p><em>int</em></p></td>
+<td><p>positive integer of drawing revision</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example displays a limited portion of the data retrieved from the API. The actual result will have more than 5 elements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_id&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T3A-13C&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Original Plan and Profile Sheet 5&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;1966-01-07&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_id&quot;</span> <span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;TA-15&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Original Plan and Profile Sheet 11&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;2014-10-14&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_id&quot;</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;TA-16&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Original Plan and Profile Sheet 12&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;1966-01-07&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_id&quot;</span> <span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;TA-17&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Original Plan and Profile Sheet 13&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;1966-01-07&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_id&quot;</span> <span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;TA-18&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Original Plan and Profile Sheet 14&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;1966-01-07&quot;</span>
+	<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="post-admin">
+<h3>POST /admin<a class="headerlink" href="#post-admin" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">admin</span>
+</pre></div>
+</div>
+<section id="id10">
+<h4>Body<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>query</p></td>
+<td><p><em>string</em></p></td>
+<td><p>user text query</p></td>
+</tr>
+<tr class="row-odd"><td><p>api_key</p></td>
+<td><p><em>string</em></p></td>
+<td><p>valid api key</p></td>
+</tr>
+<tr class="row-even"><td><p>operation</p></td>
+<td><p><em>string</em></p></td>
+<td><p>“delete” is the only operation implemented</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;operation&quot;</span><span class="p">:</span> <span class="s2">&quot;string </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h4>Response<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>Success</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Bad API key</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post">
+<h3>POST /<a class="headerlink" href="#post" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span>
+</pre></div>
+</div>
+<section id="id12">
+<h4>Body<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>query</p></td>
+<td><p><em>string</em></p></td>
+<td><p>user text query</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h4>Response<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<p>Each response file represents query results as a JSON object array, with each object containing a column heading and its respective result. The following information provides a breakdown of the file contents.</p>
+<section id="transmission-drawings-by-pole-stencil">
+<h5>Transmission Drawings by Pole Stencil<a class="headerlink" href="#transmission-drawings-by-pole-stencil" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dwg Name</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Title</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-even"><td><p>Revision No.</p></td>
+<td><p><em>int</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision Date</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="transmission-drawings-by-line-number">
+<h5>Transmission Drawings by Line Number<a class="headerlink" href="#transmission-drawings-by-line-number" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pole Stencil</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="transmission-poles-by-line-number">
+<h5>Transmission Poles by Line Number<a class="headerlink" href="#transmission-poles-by-line-number" title="Link to this heading">#</a></h5>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dwg Name</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Title</p></td>
+<td><p><em>string</em></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+<section id="sample-files">
+<h2>Sample Files<a class="headerlink" href="#sample-files" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h3>Transmission Drawings by Pole Stencil<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/60e10ce59eb609b954627624d73fb258/pole_stencil_result.json"><span class="xref download myst">Download</span></a> the sample file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T169-8&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure EA-O 3/3 thru EA-O 3/10&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_number&quot;</span> <span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;revision_date&quot;</span> <span class="p">:</span> <span class="s2">&quot;2019-04-03&quot;</span>
+	<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h3>Transmission Drawings by Line Number<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/82007403b26091a88069bc709a3ca7e7/poles_by_line_number_result.json"><span class="xref download myst">Download</span></a> the sample file.</p>
+<p>Response result truncated.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;127835&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;131558&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;221954&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;222077&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;228912&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;229139&quot;</span>
+	<span class="p">},</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>Transmission Poles by Line Number<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/82007403b26091a88069bc709a3ca7e7/poles_by_line_number_result.json"><span class="xref download myst">Download</span></a> the sample file.</p>
+<p>Response result truncated.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T120-1&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure Substa DE thru SK-C 0/3&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T120-10&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure SK-C 4/6 thru SK-C 4/10 Plan &amp; Profile&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T120-2&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure SK-C 0/8 thru SK-C 0/10&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T120-3&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure SK-C 0/11 thru SK-C 1/4&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;drawing_name&quot;</span> <span class="p">:</span> <span class="s2">&quot;T120-4&quot;</span><span class="p">,</span>
+		<span class="s2">&quot;drawing_title&quot;</span> <span class="p">:</span> <span class="s2">&quot;Structure SK-C 1/5 thru SK-C 1/8&quot;</span>
+	<span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="transmission-poles-by-drawing-number">
+<h3>Transmission Poles by Drawing Number<a class="headerlink" href="#transmission-poles-by-drawing-number" title="Link to this heading">#</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/f955a1d14d28f3c51dbb2622b936401f/poles_by_drawing_number_result.json"><span class="xref download myst">Download</span></a> the sample file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/3&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/4&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/5&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/6&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/7&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SK-C 2/8&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 4/7&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 4/8&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 4/9&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 4/10&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 5/1&quot;</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="s2">&quot;pole_stencil&quot;</span> <span class="p">:</span> <span class="s2">&quot;SC-BW 5/2&quot;</span>
+	<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h2>
+<p>Making API calls in Python is straightforward. If you are working on your local machine, ensure that the Node.js and MySQL server are active. Run one of the scripts below, modifying the query parameter to experiment with various outputs.</p>
+<section id="id17">
+<h3>POST /<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:3000&#39;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span><span class="s1">&#39;EA-O 3/3&#39;</span><span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3>POST/admin<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:3000&#39;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="s1">&#39;CI 5/5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="s1">&#39;caphie7chai2yaengooghiv7OuThiepie4kah2ku&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;operation&#39;</span><span class="p">:</span> <span class="s1">&#39;delete&#39;</span>
+	<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="scripts.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Scripts</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="front-end.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Front-End</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors">Errors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Unique Identifiers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-insert">POST /insert</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#body">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#response">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-line">POST /update_line</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-drawings">POST /update_drawings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-update-pole">POST /update_pole</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-tables">POST /tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pole-table">Pole Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pole-drawings-table">Pole Drawings Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#line-table">Line Table</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#drawings-table">Drawings Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-admin">POST /admin</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Response</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post">POST /</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Body</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-drawings-by-pole-stencil">Transmission Drawings by Pole Stencil</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-drawings-by-line-number">Transmission Drawings by Line Number</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-poles-by-line-number">Transmission Poles by Line Number</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-files">Sample Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Transmission Drawings by Pole Stencil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Transmission Drawings by Line Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Transmission Poles by Line Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-poles-by-drawing-number">Transmission Poles by Drawing Number</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">POST /</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">POST/admin</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Eric Knigge, Ariunzaya Erdenebileg, Lucas Knezevich
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, TxDwgs Team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
