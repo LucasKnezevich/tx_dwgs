@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Transmission Drawings'
-copyright = '2022, Eric Knigge'
-author = 'Eric Knigge'
+copyright = '2024, TxDwgs Team'
+author = 'Eric Knigge, Ariunzaya Erdenebileg, Lucas Knezevich'
 
 
 # -- General configuration ---------------------------------------------------
